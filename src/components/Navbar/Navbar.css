@@ -1,0 +1,101 @@
+nav{
+    display: flex;
+    background: rgba(0,0,0,0.9);
+    position: relative;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 999;
+    
+}
+.logo{
+    font-weight: 600;
+    font-size: 25px;
+    color: tomato;
+    padding: 20px;
+}
+.menu_icon .fa-times{
+    transform: rotate(360deg);
+    transition: all 0.2s ease-in-out;
+}
+.menu_icon .fa-bars{
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.logo font{
+    color: #fff;
+}
+.Menu_List{
+list-style-type: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.Menu_List li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+.menu_icon{
+    display: none;
+}
+.Menu_List li:last-child a{
+    font-weight: 300;
+    padding: 5px 10px;
+    background-color: #01aacd;
+    transition: all 0.5s ease-in-out;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+.Menu_List li a:hover,.Menu_List li a.active{
+    background-color: #fff;
+    color:#000;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:800px) {
+    .logo{
+        font-size: 20px;
+
+    }
+    .Menu_List li a{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .menu_icon{
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .Menu_List{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        padding: 20px;
+        top:60px;
+        right: 0;
+    }
+    .Menu_List li{
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .Menu_List li a, .Menu_List li:last-child a{
+        width: 100px;
+        display: block;
+        margin:auto;
+    }
+
+    .Menu_List.close{
+        right: -100%;
+        transition: all 0.5s ease-in-out;
+    }
+}
